@@ -12,7 +12,7 @@ Ainsi :
 * Lorsqu'un site respecte les règles d'accessibilité, Julien, aveugle, peut écouter le contenu de chaque page lue par son navigateur vocal, et naviguer à l'aide des indications données par celui-ci.    
 * Lorsqu'un site respecte les règles d'accessibilité, Papi et Mamie ne sont pas gênés par la taille des textes, ils peuvent utiliser la fonction de “grossissement des textes” de leur navigateur.
          
-Enfin, le respect des critères techniques d'accessibilité ne bénéficie pas qu'aux publics handicapés. En effet, ces critères recoupent pour une large part ceux, plus généraux, de la qualité des services en ligne : chacun y trouvera son compte, avec une meilleure navigabilité, une ergonomie plus ouverte, un Web plus intuitif et d'un abord moins complexe.      
+Enfin, le respect des critères techniques d'accessibilité ne bénéficie pas qu'aux publics handicapés. En effet, ces critères recoupent pour une large part ceux, plus généraux, de la qualité des services en ligne : chacun y trouvera son compte, avec une meilleure navigabilité, une ergonomie plus ouverte, un Web plus intuitif et d'un abord moins complexe.      https://github.com/MarieSochala/projet-Accessibilit-des-compost-web.git
 
 ## 2.Comment rendre son site accessible ?
 
@@ -51,6 +51,40 @@ Voici une check-list exhaustive de tout ce qu'il y a à respecter pour qu'un sit
 * Elements commes les liens et boutons créés de manière à ce que leur nature soit évidente   
 * Mettre un texte alternatif pour le contenu sonore ou visuel, vérifier que sans son le contenu fonctionne toujours    
 * Eviter les éléments avec un délai d'intéractions 
+
+
+### a. Document landmarks ou Sections du document
+Pour structurer un document, ARIA définit les rôles des zones du document:
+
+-article
+    Contenu ayant du sens par lui-même, comme un article ou un commentaire de blog, 	un message sur un forum, etc.
+-banner
+    Contenu à propos du site, comme le titre de la page ou le logo.
+-complementary
+    Permet éventuellement de définir une partie du contenu principal, mais est plus 	approprié pour du contenu séparé : la météo sur un portail web par exemple.
+-contentinfo
+    Contenu dépendant d’un autre, comme des notes de bas de page, un copyright, un 	lien vers la déclaration de confidentialité, un lien vers les paramètres de 	l’application, etc.
+-main
+    Contenu directement lié ou englobant le contenu central du document.
+-navigation
+    Contient des liens pour naviguer dans ou en dehors du document.
+-search
+    Cette section contient un formulaire de recherche permettant de chercher sur le 	site. 
+
+```Html
+<div role="banner">
+...
+</div>
+<div role="navigation">
+...
+</div>
+<div role="main">
+...
+</div>
+```
+
+
+
     
 ## 3. Exemple concret
 
@@ -69,7 +103,7 @@ Voici un exemple de code non accessible :
     <div>
         <h3>Titre de l’article</h3>    
         <p>Un premier paragraphe</p>    
-        <p>Un second paragraphe</p>
+        <p>Un second paragraphe</p>https://github.com/MarieSochala/projet-Accessibilit-des-compost-web.git
     </div>
 </div>
 <div >    
